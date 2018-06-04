@@ -114,7 +114,7 @@ var Carousel = createReactClass({
   },
 
   _animateNextPage() {
-    if(this.props.disableScroll){
+    if(!this.props.scrollEnabled){
       return this.state.activePage;
     }
 
@@ -149,7 +149,7 @@ var Carousel = createReactClass({
           contentContainerStyle={styles.container}
           onBegin={this._onAnimationBeginPage}
           onEnd={this._onAnimationEnd}
-          disableScroll={this.props.disableScroll}
+          scrollEnabled={this.props.scrollEnabled}
         >
           {this.props.children}
         </CarouselPager>
