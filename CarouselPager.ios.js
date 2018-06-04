@@ -29,6 +29,7 @@ var CarouselPager = createReactClass({
       onScrollBeginDrag={this.props.onBegin}
       onMomentumScrollEnd={this._onMomentumScrollEnd}
       scrollsToTop={false}
+      scrollEnabled={this.props.scrollEnabled}
     >
       {this.props.children}
     </ScrollView>;

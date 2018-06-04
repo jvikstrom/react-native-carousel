@@ -35,6 +35,7 @@ var CarouselPager = createReactClass({
       onPageScroll={this.props.onBegin}
       onPageSelected={(e) => this._onPageSelected(e.nativeEvent.position)}
       scrollsToTop={false}
+      scrollEnabled={this.props.scrollEnabled}
       >
         {this.props.children.map((c, idx) => <View key={idx} style={{flex: 1}}>{c}</View>)}
       </ViewPagerAndroid>;
