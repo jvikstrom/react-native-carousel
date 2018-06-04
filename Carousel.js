@@ -114,6 +114,10 @@ var Carousel = createReactClass({
   },
 
   _animateNextPage() {
+    if(this.props.disableScroll){
+      return this.state.activePage;
+    }
+
      var activePage = 0;
      if (this.state.activePage < this.props.children.length - 1) {
          activePage = this.state.activePage + 1;
